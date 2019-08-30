@@ -7,5 +7,5 @@
         $Global:CRSPath = Split-Path $PSCommandPath}
             
     #Error Checking
-    IF ($CRSPath -eq "" -or !(Test-Path variable:global:CRSPath)) {Messages -Msgtype Error -MsgLevel Fatal -Location Function-CRSPath  -Message "Path of current running script not found" -Impact "Script will NOT be able to find Modules, cannot continue."}
+    IF ($CRSPath -eq "" -or !(Test-Path variable:global:CRSPath)) {Write-Host "Path of current running script not found... cannot continue!"}
 }
