@@ -8,4 +8,6 @@
             
     #Error Checking
     IF ($CRSPath -eq "" -or !(Test-Path variable:global:CRSPath)) {Write-Host "Path of current running script not found... cannot continue!"}
+
+    Write-Output $Global:CRSPath
 }
